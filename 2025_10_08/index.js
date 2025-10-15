@@ -26,7 +26,7 @@ const server = http.createServer((req, res) => {
             }
             console.log('Plik zostal zapisany!');
 
-            // Zwracamy JSON {"ok":"ok"} po zapisaniu pliku
+            // Zwracamy JSON {"ok":"ok"}
             res.writeHead(200, { 'Content-Type': 'application/json; charset=utf-8' });
             res.end(JSON.stringify({ ok: 'ok' }));
         });
