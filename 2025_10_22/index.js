@@ -32,24 +32,24 @@ app.get('/get_params', (req, res) => {
         }
     })
 })
+// app.use((req, res)=>{
+//     let fajnasciezka = path.join(__dirname, 'assets', req.path)
+//
+//     fs.access(fajnasciezka, fs.constants.F_OK, (err) => {
+//         if (err) {
+//             res.status(404).type('text/plain; charset=utf-8').send('404 - Nie znaleziono :(')
+//         }
+//         else{
+//             const mimeType = mime.lookup(fajnasciezka) || 'application/octet-stream'
+//             res.type(mimeType)
+//             res.sendFile(fajnasciezka)
+//         }
+//     })
+// })
+app.use(express.static('assets'))
+
 app.use((req, res)=>{
-    let fajnasciezka = path.join(__dirname, 'assets', req.path)
-
-    fs.access(fajnasciezka, fs.constants.F_OK, (err) => {
-        if (err) {
-            res.status(404).type('text/plain; charset=utf-8').send('404 - Nie znaleziono :(')
-        }
-        else{
-            const mimeType = mime.lookup(fajnasciezka) || 'application/octet-stream'
-            res.type(mimeType)
-            res.sendFile(fajnasciezka)
-        }
-    })
-})
-
-
-app.use((req, res)=>{
-    res.status(404).type('text/plain; charset=utf-8').send('404 - Nie znaleziono :(')
+    res.status(404).json({ error: '404 - Nie znaleziono :(' })
 })
 app.listen(3000, ()=>{
     console.log('Server jest na porcie http://localhost:3000 :)')
