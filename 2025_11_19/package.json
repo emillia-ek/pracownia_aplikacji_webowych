@@ -1,0 +1,16 @@
+{
+  "name": "2025_11_19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0",
+    "prisma": "^6.19.0"
+  }
+}
