@@ -1,0 +1,48 @@
+.heroSection {
+  text-align: center;
+  padding: 80px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary-pink), #FF9A9E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .ctaButton {
+    background: var(--primary-pink);
+    color: white;
+    padding: 16px 40px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-pink);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(255, 107, 129, 0.4);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .title { font-size: 2.5rem; }
+    .subtitle { font-size: 1rem; }
+  }
+}

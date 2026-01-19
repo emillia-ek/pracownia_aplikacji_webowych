@@ -1,0 +1,56 @@
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+  flex-grow: 1;
+
+  .sectionTitle {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary-pink);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 25px; /* Duże zaokrąglenie */
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-pink);
+    border-color: var(--primary-pink);
+  }
+
+  .icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    color: var(--primary-pink);
+  }
+
+  .cardTitle {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+  }
+
+  .cardCount {
+    color: var(--text-light);
+    font-size: 0.9rem;
+  }
+}
