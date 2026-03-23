@@ -1,0 +1,22 @@
+{
+  "name": "2025_11_19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "@tanstack/react-query": "^5.95.0",
+    "@testing-library/react": "^16.3.2",
+    "dotenv": "^17.3.1",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.0",
+    "prisma": "^6.19.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.13.1"
+  }
+}
